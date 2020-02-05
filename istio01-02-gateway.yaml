@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: mygateway
+  namespace: pocsdev
+spec:
+  selector:
+    istio: ingressgateway # use istio default ingress gateway
+  servers:
+  - port:
+      number: 443
+      name: https
+      protocol: HTTPS
+    tls:
+      mode: MUTUAL
+      credentialName: "httpbin-dev-pocs-myorg-com-mtls-secret" # must be the same as secret
+    hosts:
+    - "httpbin.dev.pocs.myorg.com"

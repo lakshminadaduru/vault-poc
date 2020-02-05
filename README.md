@@ -1,0 +1,1 @@
+This POC only enable httpbin Istio example in default namespace.

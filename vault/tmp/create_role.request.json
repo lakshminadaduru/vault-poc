@@ -1,0 +1,5 @@
+{
+  "allowed_domains": "dev.pocs.myorg.com",
+  "allow_subdomains": true,
+  "max_ttl": "8760h"
+}
